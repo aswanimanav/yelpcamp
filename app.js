@@ -15,8 +15,9 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index")
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/yelp_camp_v8', {
+mongoose.connect('mongodb+srv://aswanimanav:manav3112@cluster0.u90js.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true
 })
     .then(() => console.log('Connected to DB!'))
